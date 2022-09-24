@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Coding Quiz</title>
+    <link rel="stylesheet" href="./Assets/style.css">
+</head>
+
+<body>
+    <section class="main">
+        <div class="scoresntime">
+            <div class="scores">View High Scores</div>
+            <div class="time">Time:</div>
+        </div>
+
+        <div>
+            <h1 class="welcome">Welcome to JavaScript Coding Challenge</h1>
+        </div>
+
+        <div class="instructionsContainer">
+            <p class="instructions">* This is a timed quiz, once you click on "Start Quiz" a timer starts and you are
+                presented with a question</p>
+            <p class="instructions">* After you've slected an answer, you will be presented with another question</p>
+            <p class="instructions">* If you answer a question incorrectly there will be time subtracted from the clock
+            </p>
+            <p class="instructions">* The game is over when all questions are answered or the timer reaches 0</p>
+            </p>
+        </div>
+
+        <div class="startQuiz">
+            <div><button class="button">Start Quiz</button></div>
+        </div>
+
+    </section>
+    <section>
+        <!-- Slideshow container -->
+        <div class="questionSlidesContainer">
+
+            <div class="myQuestions">
+                <div>
+                    <h2 class="question">What purpose does JavaScript serve in programing?</h2>
+                </div>
+                <div class="choices">
+                    <input class="selectionText" type="button" onclick="validateQuestion1Answer('A')"
+                        value="A. To make web apps attractive"></input>
+                    <input class="selectionText" type="button" onclick="validateQuestion1Answer('B')"
+                        value="B. To waste your time"></input>
+                    <input class="selectionText" type="button" onclick="validateQuestion1Answer('C')"
+                        value="C. To add functiuonality to web apps"></input>
+                </div>
+               
+            </div>
+
+            <div class="myQuestions">
+                <div>
+                    <h2 class="question">What are true or false values called in JavaScript?</h2>
+                </div>
+                <div class="choices">
+                    <div class="selectionText" data-number="A">A. Arrays </div>
+                    <div class="selectionText" data-number="B">B. Booleans</div>
+                    <div class="selectionText" data-number="C">C. Yes or No questions</div>
+                </div>
+            </div>
+
+            <div class="myQuestions">
+
+                <div>
+                    <h2 class="question">Where in the HTML doc do you link your JavaScript file?</h2>
+                </div>
+                <div class="choices">
+
+                    <div class="selectionText" data-number="A">A. The end of the head </div>
+                    <div class="selectionText" data-number="B">B. The end of the footer</div>
+                    <div class="selectionText" data-number="C">C. The end of the body </div>
+                </div>
+            </div>
+            <div>
+                <hr>
+
+                <p class="wrongRightAlert"></p>
+
+            </div>
+        </div>
+
+    </section>
+
+    <script src="./Assets/script.js"></script>
+</body>
+
+</html>

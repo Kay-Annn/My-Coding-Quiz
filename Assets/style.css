@@ -1,0 +1,94 @@
+* {box-sizing:border-box}
+
+.main {
+    margin: 50px;
+}
+
+.scoresntime {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    font-size: 20px;
+    font-weight: bolder;
+}
+
+.scores {
+    background-color: rgb(190, 18, 119);
+}
+
+.time {
+    background-color: rgb(190, 18, 119);
+}
+
+.welcome {
+    text-align: center;
+    font-size: 35px;
+}
+
+.instructionsContainer {
+    justify-items: start;
+    background-color: rgb(237, 129, 247);
+    width: 800px;
+    height: 300px;
+    margin-left: 20%;
+    margin-top: 20px;
+    border-radius: 2%;
+}
+
+.instructions {
+    font-size: 20px;
+    margin: 2%;
+    padding-top: 20px;
+}
+
+.startQuiz{
+display: flex;
+flex-direction: row;
+flex-wrap: wrap;
+justify-content: center;
+margin-top: 35px;
+margin-left: 15%;
+height: 6px;
+}
+
+.button{
+    height: 35px;
+    background-color: magenta;
+    font-weight: bolder;color: white;
+    font-size: 20px;
+    border-color: magenta;
+    border-radius: 10px;
+}
+
+.questionSlidesContainer{
+    max-width: 1000px;
+    position: relative;
+    margin: auto;
+}
+
+.myQuestions{
+ align-content: center;
+ height: 100px;   
+ width: 100%;
+ border-style: solid;height: 100%;
+ display: block;
+ }
+
+.question{
+    font-size: 24px;
+    font-weight: bolder;
+}
+
+.choices{
+font-size: 20px;
+}
+
+.selectionText{
+    padding: 2%;
+}
+
+.selectionText:hover{
+    cursor: pointer;
+    box-shadow: 0 0.10rem 0.4rem 0 rgb(245, 188, 245)
+    }
