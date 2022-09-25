@@ -1,4 +1,6 @@
-* {box-sizing:border-box}
+* {
+    box-sizing: border-box
+}
 
 .main {
     margin: 50px;
@@ -14,11 +16,11 @@
 }
 
 .scores {
-    background-color: rgb(190, 18, 119);
+    background-color: rgb(252, 169, 238);
 }
 
 .time {
-    background-color: rgb(190, 18, 119);
+    background-color: rgb(252, 169, 238);
 }
 
 .welcome {
@@ -28,7 +30,7 @@
 
 .instructionsContainer {
     justify-items: start;
-    background-color: rgb(237, 129, 247);
+    background-color: rgb(252, 169, 238);
     width: 800px;
     height: 300px;
     margin-left: 20%;
@@ -42,53 +44,89 @@
     padding-top: 20px;
 }
 
-.startQuiz{
-display: flex;
-flex-direction: row;
-flex-wrap: wrap;
-justify-content: center;
-margin-top: 35px;
-margin-left: 15%;
-height: 6px;
+.startQuiz {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 35px;
+    height: 6px;
 }
 
-.button{
+.button {
     height: 35px;
     background-color: magenta;
-    font-weight: bolder;color: white;
+    font-weight: bolder;
+    color: white;
     font-size: 20px;
     border-color: magenta;
     border-radius: 10px;
 }
 
-.questionSlidesContainer{
-    max-width: 1000px;
+.questionSlidesContainer {
+    max-width: 700px;
+    height: 200px;
     position: relative;
     margin: auto;
 }
 
-.myQuestions{
- align-content: center;
- height: 100px;   
- width: 100%;
- border-style: solid;height: 100%;
- display: block;
- }
+.myQuestions {
+    padding: 5%;
+    align-content: center;
+    width: 100%;
+    border-style: solid;
+    height: 100%;
+    display: block;
+    background-color: rgb(252, 169, 238);
+}
 
-.question{
+.question {
     font-size: 24px;
     font-weight: bolder;
 }
 
-.choices{
-font-size: 20px;
+.choices {
+    font-size: 20px;
 }
 
-.selectionText{
+.selectionText {
     padding: 2%;
 }
 
-.selectionText:hover{
+.selectionText:hover {
     cursor: pointer;
     box-shadow: 0 0.10rem 0.4rem 0 rgb(245, 188, 245)
-    }
+}
+
+.quizOverSection{
+margin-left: 40%;
+}
+
+.initialsSection {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+
+}
+
+.initialsBox {
+    background-color: rgba(240, 240, 240, 0.788);
+    border-style: solid;
+    border-color: rgb(245, 188, 245);
+    height: 30px;
+    width: 250px;
+    margin-left: 5px;
+    margin-top: 12px;
+}
+
+.submitInitialsBtn{
+    margin-left: 10px;
+    height: 30px;
+    width: 90px;
+    margin-top: 12px;
+    background-color: rgb(245, 188, 245);
+    border-radius: 7px;
+    border-color: white;
+    font-size: 16px;
+    font-weight: bold;
+}

@@ -51,7 +51,7 @@
                     <input class="selectionText" type="button" onclick="validateQuestion1Answer('C')"
                         value="C. To add functiuonality to web apps"></input>
                 </div>
-               
+
             </div>
 
             <div class="myQuestions">
@@ -59,32 +59,46 @@
                     <h2 class="question">What are true or false values called in JavaScript?</h2>
                 </div>
                 <div class="choices">
-                    <div class="selectionText" data-number="A">A. Arrays </div>
-                    <div class="selectionText" data-number="B">B. Booleans</div>
-                    <div class="selectionText" data-number="C">C. Yes or No questions</div>
+                    <input class="selectionText" type="button" onclick="validateQuestion2Answer('A')"
+                        value="A. Arrays"></input>
+                    <input class="selectionText" type="button" onclick="validateQuestion2Answer('B')"
+                        value="B. Booleans"></input>
+                    <input class="selectionText" type="button" onclick="validateQuestion2Answer('C')"
+                        value="C. Yes or No questions"></input>
                 </div>
             </div>
 
             <div class="myQuestions">
-
                 <div>
                     <h2 class="question">Where in the HTML doc do you link your JavaScript file?</h2>
                 </div>
                 <div class="choices">
-
-                    <div class="selectionText" data-number="A">A. The end of the head </div>
-                    <div class="selectionText" data-number="B">B. The end of the footer</div>
-                    <div class="selectionText" data-number="C">C. The end of the body </div>
+                    <input class="selectionText" type="button" onclick="validateQuestion3Answer('A')"
+                        value="A. The end of the head"></input>
+                    <input class="selectionText" type="button" onclick="validateQuestion3Answer('B')"
+                        value="B. The end of the footer"></input>
+                    <input class="selectionText" type="button" onclick="validateQuestion3Answer('C')"
+                        value="C. The end of the body"></input>
                 </div>
+
             </div>
-            <div>
+            <div class="wrongRightAlert">
                 <hr>
-
-                <p class="wrongRightAlert"></p>
-
+                <p></p>
             </div>
         </div>
-
+    </section>
+    <section class="quizOverSection">
+        <div>
+            <h3>All done!</h3>
+            <p class="finalScore"></p>
+            <div class="initialsSection">
+                <p>Enter initials:</p>
+                <div class="initialsBox">
+                </div>
+                <input class="submitInitialsBtn" type="button" value="Submit">
+            </div>
+        </div>
     </section>
 
     <script src="./Assets/script.js"></script>
