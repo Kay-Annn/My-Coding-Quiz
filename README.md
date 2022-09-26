@@ -6,8 +6,7 @@ The user is present with a maipage that lays out the instructions for the quiz a
 Once the user clicks on the start quiz button the timer begins and they are presented with the first question. 
 
 The following image depicts the mainpage
-[Attached is the mainpage](./images/Coding_quiz_mainpage.png)
-
+[Attached is the mainpage] ./im
 When the user selects a correct answer the app notifies "correct" and if the user selects and if the user selects an incorrect answer it notifies "wrong". The is also five seconds removed from the timer when the answer is incorrect/ 
 
 [The image attached shows when the quiz has started](./images/coding_quiz_first_question.png)
@@ -20,7 +19,7 @@ I learned how to organize my thoughts and build function or feature by feature
 I learn how to make a page reload using the location.reload(); syntax
 
 ## Deployment
-Please view my deployed application at the following link: 
+Please view my deployed application at the following link: https://kay-annn.github.io/My-Coding-Quiz/
 
 ## Licence
 I used the MIT licence, please refer to licence in repository.
