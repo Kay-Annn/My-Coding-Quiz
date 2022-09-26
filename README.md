@@ -20,7 +20,7 @@ I learned how to organize my thoughts and build function or feature by feature
 I learn how to make a page reload using the location.reload(); syntax
 
 ## Deployment
-Please view my deployed application at the following link: 
+Please view my deployed application at the following link: https://kay-annn.github.io/My-Coding-Quiz/
 
 ## Licence
 I used the MIT licence, please refer to licence in repository.
