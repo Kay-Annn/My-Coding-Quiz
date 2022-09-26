@@ -2,10 +2,17 @@ var startGameBtn = document.querySelector(".button");
 var popUpQuestiions = document.getElementsByClassName("myQuestions");
 var timeEl = document.querySelector(".time");
 var secondsLeft = 60;
+var submitBtn = document.querySelector(".submitInitialsBtn")
 startGameBtn.addEventListener("click", startQuiz);
 var timerInterval;
 let questionIndex = 0;
 var currentScore = 0;
+var initials = document.querySelector(".initialsBox");
+submitBtn.addEventListener("click",saveInitialScoreLocalStorage);
+var goBackBtn = document.querySelector(".retakeQuiz")
+goBackBtn.addEventListener("click", GoBack)
+var clearScores = document.querySelector(".clearHighScores")
+clearScores.addEventListener("click", ClearLocalStorage)
 
 hideSlides();
 hideQuizOver();
@@ -144,6 +151,40 @@ var finalScore = document.querySelector(".finalScore")
 finalScore.textContent = "Your final score is " + currentScore + "!";    
 }
 
+function saveInitialScoreLocalStorage(){
+// store to local storage
+localStorage.setItem(initials.value,currentScore);
+hideQuizOver()
+showHighScoresSection();
+
+}
+
+function showHighScoresSection(){
+    var showHighScoresDisplay = document.querySelector(".highScoresSection")
+    showHighScoresDisplay.style.display = "block"
+    let userDatainfo = getLocalStorageData()
+    populateUserData(userDatainfo)
+
+}
+
+function getLocalStorageData(){
+    var userData= localStorage.getItem(initials.value);
+    return userData;
+  }
+
+function populateUserData(userData){
+    var inputInitialScore = document.querySelector(".highScoresBox")
+    inputInitialScore.value = initials.value + " " +"-"+ " " + userData
+}   
+
+function GoBack(){
+    location.reload();
+}
+
+function ClearLocalStorage(){
+    localStorage.removeItem(initials.value);
+}
+
     //Quiz Begins
     //1.hide instructions
     //2.hide start quiz button
@@ -161,8 +202,28 @@ finalScore.textContent = "Your final score is " + currentScore + "!";
     //1.Timer stops
     //2.Alert pops up and indicates quiz is over
     //3.User is prompted to input name
-    //4.User's name and score is logged to local storage and then displayed.
-    //5.User is presented with the option to retake quiz or quit
+    //4.User clicks submit
+    //5.Get reference to submit button
+    //6.User's name and score is logged to local storage
+    //7.User is taken to high score page
+    //8.High scores are displayed 
+    //8.User is presented with the option to retake quiz or clear high scores
+
+
+
+    //I am at the high score page
+    //High scores and user initials are to be displayed on the page 
+
+
+    //1. How to get user score
+        //var userdate = localStorage.getItem("initial");
+        //
+    //
+    //2. How to get initials
+    
+
+    //Input user data and local storage info in high score input field
+
 
 
 
