@@ -2,6 +2,10 @@
     box-sizing: border-box
 }
 
+:root{
+--themeColour: rgb(252, 169, 238);
+}
+
 .main {
     margin: 50px;
 }
@@ -16,11 +20,11 @@
 }
 
 .scores {
-    background-color: rgb(252, 169, 238);
+    background-color: var(--themeColour);
 }
 
 .time {
-    background-color: rgb(252, 169, 238);
+    background-color: var(--themeColour);
 }
 
 .welcome {
@@ -30,7 +34,7 @@
 
 .instructionsContainer {
     justify-items: start;
-    background-color: rgb(252, 169, 238);
+    background-color: var(--themeColour);
     width: 800px;
     height: 300px;
     margin-left: 20%;
@@ -98,8 +102,8 @@
     box-shadow: 0 0.10rem 0.4rem 0 rgb(245, 188, 245)
 }
 
-.quizOverSection{
-margin-left: 40%;
+.quizOverSection, .highScoresSection {
+    margin-left: 40%;
 }
 
 .initialsSection {
@@ -119,8 +123,8 @@ margin-left: 40%;
     margin-top: 12px;
 }
 
-.submitInitialsBtn{
-    margin-left: 10px;
+.submitInitialsBtn, .retakeQuiz, .clearHighScores{
+ 
     height: 30px;
     width: 90px;
     margin-top: 12px;
@@ -129,4 +133,88 @@ margin-left: 40%;
     border-color: white;
     font-size: 16px;
     font-weight: bold;
+}
+
+.highScoresBox{
+    background-color: var(--themeColour);
+    border-color: blanchedalmond;
+}
+
+.RetakeOrClearScoreSection{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.clearHighScores{
+    width: 150px;
+}
+
+.highScoresSection{
+    display: none;
+}
+
+@media (max-width: 500px) {
+.scoresntime{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    font-size: 12px;
+    font-weight: bolder; 
+}
+.welcome{
+    text-align: center;
+    font-size: 15px;
+    margin-top: 10%;
+}
+
+.instructionsContainer {
+    background-color: var(--themeColour);
+    width: 100%;
+    height: 40%;
+    margin-left: 2%;
+    margin-top: 20px;
+    border-radius: 2%;
+    
+}
+
+.questionSlidesContainer {
+    max-width: 100%;
+    height: 250px;
+    position: relative;
+ 
+}
+
+.quizOverSection, .highScoresSection {
+    margin-left: 20%;
+
+}
+
+.initialsBox {
+    background-color: rgba(240, 240, 240, 0.788);
+    border-style: solid;
+    border-color: rgb(245, 188, 245);
+    height: 30px;
+    width: 80px;
+    margin-left: 4px;
+    margin-top: 12px;
+}
+
+}
+
+@media (max-width: 1025px) {
+    .instructionsContainer {
+        background-color: var(--themeColour);
+        width: 100%;
+        height: 40%;
+        margin-left: 2%;
+        margin-top: 20px;
+        border-radius: 2%;
+        
+    }   
+    .quizOverSection, .highScoresSection {
+        margin-left: 25%;
+    
+    }
 }
