@@ -19,7 +19,7 @@
         <div>
             <h1 class="welcome">Welcome to JavaScript Coding Challenge</h1>
         </div>
-
+<!--Container for instructions-->
         <div class="instructionsContainer">
             <p class="instructions">* This is a timed quiz, once you click on "Start Quiz" a timer starts and you are
                 presented with a question</p>
@@ -35,7 +35,9 @@
         </div>
 
     </section>
+    
     <section>
+        <!--container for questions-->
         <div class="questionSlidesContainer">
 
             <div class="myQuestions">
@@ -58,6 +60,7 @@
                     <h2 class="question">What are true or false values called in JavaScript?</h2>
                 </div>
                 <div class="choices">
+                    <!--placed question answers choices in an input take and added an on click event listener so that user may be able to select and answer logged-->
                     <input class="selectionText" type="button" onclick="validateQuestion2Answer('A')"
                         value="A. Arrays"></input>
                     <input class="selectionText" type="button" onclick="validateQuestion2Answer('B')"
@@ -82,7 +85,6 @@
 
             </div>
             <div class="wrongRightAlert">
-                <hr>
                 <p></p>
             </div>
         </div>

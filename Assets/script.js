@@ -13,7 +13,7 @@ var goBackBtn = document.querySelector(".retakeQuiz")
 goBackBtn.addEventListener("click", GoBack)
 var clearScores = document.querySelector(".clearHighScores")
 clearScores.addEventListener("click", ClearLocalStorage)
-
+var answerNotification = document.querySelector(".wrongRightAlert")
 hideSlides();
 hideQuizOver();
 
@@ -27,6 +27,8 @@ function hideSlides() {
     questionIndex++;
 }
 
+
+//Quiz Begins
 function startQuiz() {
     //1.hide instructions
     hideInstructions();
@@ -38,16 +40,16 @@ function startQuiz() {
     showSlide(0)
 
 }
-
+  //Hide instructions
 function hideInstructions() {
     var hideInstructions = document.querySelector(".instructionsContainer");
     hideInstructions.style.display = "none"
 }
-
+//hide start quiz button
 function hideStartQuizBtn() {
     startGameBtn.style.display = "none"
 }
-
+//timer begins
 function setTime() {
     // Sets interval in variable
     timerInterval = setInterval(function () {
@@ -63,7 +65,7 @@ function setTime() {
     }, 1000);
 
 }
-
+ //displayed first question
 function showSlide(index) {
     let i;
     for (i = 0; i <= popUpQuestiions.length; i++) {
@@ -71,6 +73,7 @@ function showSlide(index) {
     }
 }
 
+//Make options selectable and validate answer
 function validateQuestion1Answer(answer) {
     var correct = "C"
     
@@ -84,8 +87,8 @@ function validateQuestion1Answer(answer) {
     }
     hideSlides()
     showSlide(1)
+   
 }
-
 function validateQuestion2Answer(answer) {
     var correct = "B"
 
@@ -99,6 +102,7 @@ function validateQuestion2Answer(answer) {
     }
     hideSlides()
     showSlide(2)
+   
 }
 
 function validateQuestion3Answer(answer) {
@@ -115,7 +119,7 @@ function validateQuestion3Answer(answer) {
       ShowQuizOver()
   }
 
-
+  //Answer is Validated - timer decreased if incorrect answer
 function decreaseTime() {
     if (secondsLeft === 0) {
         return
@@ -124,18 +128,17 @@ function decreaseTime() {
         secondsLeft = secondsLeft - 5;
     }
 }
-
+//Alert wrong or right function if user is correct or incorrect
 function alertWrongRight(correctOrWrong) {
-    var answerNotification = document.querySelector(".wrongRightAlert")
     answerNotification.textContent = correctOrWrong
 }
-
 
 function hideQuizOver() {
     var hideQuizOver = document.querySelector(".quizOverSection");
     hideQuizOver.style.display = "none";
 }
 
+ //Quiz is over and timer stops
 function ShowQuizOver() {
     clearInterval(timerInterval);
     finalScore()
@@ -146,6 +149,7 @@ function ShowQuizOver() {
   
 }
 
+//Displays final score 
 function finalScore(){
 var finalScore = document.querySelector(".finalScore")
 finalScore.textContent = "Your final score is " + currentScore + "!";    
@@ -177,54 +181,14 @@ function populateUserData(userData){
     inputInitialScore.value = initials.value + " " +"-"+ " " + userData
 }   
 
+//User is presented with the option to go back to main section of quiz      
 function GoBack(){
     location.reload();
 }
-
+// User is present with the option to clear their score
 function ClearLocalStorage(){
     localStorage.removeItem(initials.value);
 }
-
-    //Quiz Begins
-    //1.hide instructions
-    //2.hide start quiz button
-    //3.timer begins
-    //4.displayed first question
-    //5.Make options selectable
-    //6.Answer is Validated - timer decreased if incorrect answer
-    //7.Question 2 is displayed
-    //8.Answer is Validated - timer decreased if incorrect answer
-    //9.Question 3 is displayed
-    //10.Answer is Validated - timer decreased if incorrect answer
-
-
-    //Quiz is over
-    //1.Timer stops
-    //2.Alert pops up and indicates quiz is over
-    //3.User is prompted to input name
-    //4.User clicks submit
-    //5.Get reference to submit button
-    //6.User's name and score is logged to local storage
-    //7.User is taken to high score page
-    //8.High scores are displayed 
-    //8.User is presented with the option to retake quiz or clear high scores
-
-
-
-    //I am at the high score page
-    //High scores and user initials are to be displayed on the page 
-
-
-    //1. How to get user score
-        //var userdate = localStorage.getItem("initial");
-        //
-    //
-    //2. How to get initials
-    
-
-    //Input user data and local storage info in high score input field
-
-
 
 
 
