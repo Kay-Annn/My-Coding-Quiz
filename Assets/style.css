@@ -1,7 +1,7 @@
 * {
     box-sizing: border-box
 }
-
+/*Added theme colours for ease of coding*/
 :root{
 --themeColour: rgb(252, 169, 238);
 }
@@ -102,6 +102,7 @@
     box-shadow: 0 0.10rem 0.4rem 0 rgb(245, 188, 245)
 }
 
+/*Grouped classes with same properties */
 .quizOverSection, .highScoresSection {
     margin-left: 40%;
 }
@@ -123,6 +124,7 @@
     margin-top: 12px;
 }
 
+/*Grouped classes with same properties */
 .submitInitialsBtn, .retakeQuiz, .clearHighScores{
  
     height: 30px;
@@ -154,6 +156,7 @@
     display: none;
 }
 
+/*Added media query for responsiveness*/
 @media (max-width: 500px) {
 .scoresntime{
     display: flex;
@@ -186,6 +189,7 @@
  
 }
 
+/*Grouped classes with similar properties*/
 .quizOverSection, .highScoresSection {
     margin-left: 20%;
 
@@ -213,6 +217,7 @@
         border-radius: 2%;
         
     }   
+    /*Grouped classes with similar properties*/
     .quizOverSection, .highScoresSection {
         margin-left: 25%;
     
